@@ -1,0 +1,12 @@
+server:
+  port: 9201
+spring:
+  application:
+    name: consumer-ribbone
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:9001/eureka/,http://peer2:9002/eureka/
+  instance:
+    hostname: ribbon
+#    prefer-ip-address: true

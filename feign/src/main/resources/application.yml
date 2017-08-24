@@ -1,0 +1,16 @@
+server:
+  port: 9202
+spring:
+  application:
+    name: consumer-feign
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:9001/eureka/,http://peer2:9002/eureka/
+  instance:
+    hostname: feign
+#    prefer-ip-address: true
+#启用熔断 不设置无法回退
+feign:
+  hystrix:
+    enabled: true
